@@ -11210,7 +11210,7 @@ body {
 
 .projects-section-mod {
   padding-top: 2%;
-  padding-bottom: 2%;
+  padding-bottom: auto;
 }
 
 .my-auto-mod {
