@@ -63,6 +63,8 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -7585,6 +7587,14 @@ textarea.form-control-lg {
   color: inherit !important;
 }
 
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .bg-primary {
   background-color: #64a19d !important;
 }
@@ -11197,8 +11207,26 @@ body {
 .projects-section {
   padding: 10rem 0;
 }
+
+.projects-section-mod {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.my-auto-mod {
+  margin-top: 0.03px !important;
+  margin-bottom: 0.03px !important;
+}
+
+.underline-mod {
+  text-decoration-line: underline;
+  text-decoration-style: solid #000;
+  text-underline-offset: 2px ;
+}
+
 .projects-section .featured-text {
   padding: 2rem;
+  padding-bottom: 2%;
   color: #fff;
 }
 @media (min-width: 992px) {
