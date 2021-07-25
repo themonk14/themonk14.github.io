@@ -11230,6 +11230,20 @@ body {
   text-underline-offset: 2px ;
 }
 
+.vim-caret {
+  -webkit-animation:vimCaret 1s linear infinite;
+  -o-animation:vimCaret 1s linear infinite;
+  animation:vimCaret 1s linear infinite
+}
+
+.vim-caret {
+  -webkit-animation:vimCaret 1s linear infinite;
+  -o-animation:vimCaret 1s linear infinite;
+  animation:vimCaret 1s linear infinite
+}@-webkit-keyframes vimCaret{0%{background-color:transparent}49%{background-color:transparent}50%{background-color:rgba(255,255,255,.2)}100%{background-color:rgba(255,255,255,.2)}}@-o-keyframes vimCaret{0%{background-color:transparent}49%{background-color:transparent}50%{background-color:rgba(255,255,255,.2)}100%{background-color:rgba(255,255,255,.2)}}@keyframes -->
+vimCaret{0%{background-color:transparent}49%{background-color:transparent}50%{background-color:rgba(255,255,255,.2)}100%{background-color:rgba(255,255,255,.2)}}
+
+
 .projects-section .featured-text {
   padding: 2rem;
   padding-bottom: 2%;
