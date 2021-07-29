@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Grayscale v7.0.2 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v5.0.2 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -2967,13 +2957,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #64a19d;
+  background-color: #3c7507;
   border-color: #64a19d;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #558985;
-  border-color: #50817e;
+  background-color: #fa591a;
+  border-color: #ff7300;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -11138,7 +11128,7 @@ body {
 
 .masthead {
   position: relative;
-  width: 100%;
+  width: auto;
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
@@ -11193,7 +11183,7 @@ body {
 .about-section-inc-height {
   height: 750px;
   padding-top: 10rem;
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0.9, 0, 1) 75%, rgba(0, 0, 0, 1) 100%);
 }
 
 .maintain-center {
@@ -11216,12 +11206,14 @@ body {
 .projects-section-mod {
   padding-top: 2%;
   padding-bottom: 15%;
+  background-blend-mode: overlay ;
 }
 
 
 .my-auto-mod {
   margin-top: 0.03px !important;
   margin-bottom: 0.03px !important;
+  background-blend-mode: overlay ;
 }
 
 .underline-mod {
@@ -11230,11 +11222,13 @@ body {
   text-underline-offset: 2px ;
 }
 
-#particles-js {
-  position: absolute;
+#particles-js{
   width: 100%;
   height: 100%;
-  background-image: url(assets/img/bg-masthead.jpg);
+  background-color: #b61924;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .vim-caret {
@@ -11321,16 +11315,16 @@ vimCaret{0%{background-color:transparent}49%{background-color:transparent}50%{ba
   text-align: center;
   height: 3rem;
   width: 3rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(68, 68, 68, 0.1);
   border-radius: 100%;
   line-height: 3rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(75, 75, 75, 0.3);
 }
 .contact-section .social a:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(39, 37, 37, 0.5);
 }
 .contact-section .social a:active {
-  color: #fff;
+  color: rgb(42, 42, 42);
 }
 
 .footer {
