@@ -55,14 +55,14 @@ particlesJS('particles-js',
         "random": true,
         "anim": {
           "enable": false,
-          "speed": 40,
+          "speed": 50,
           "size_min": 0.1,
           "sync": false
         }
       },
       "line_linked": {
         "enable": true,
-        "distance": 150,
+        "distance": 180,
         "color": "#ffffff",
         "opacity": 0.4,
         "width": 1
