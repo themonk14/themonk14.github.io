@@ -7508,6 +7508,8 @@ textarea.form-control-lg {
   position: absolute;
   vertical-align: middle;
   padding-top: 300px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .text-decoration-none {
@@ -11219,7 +11221,7 @@ body {
 }
 
 .about-section-inc-height {
-  height: 1750px;
+  height: 2300px;
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0.9, 0, 1) 75%, rgba(0, 0, 0, 1) 100%);
 }
