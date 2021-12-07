@@ -23,17 +23,17 @@ var pJS = function(tag_id, params){
         value: 400,
         density: {
           enable: true,
-          value_area: 800
+          value_area: 700
         }
       },
       color: {
-        value: '#fff'
+        value: '#ff0707'
       },
       shape: {
-        type: 'circle',
+        type: 'triangle',
         stroke: {
           width: 0,
-          color: '#ff0000'
+          color: '#ff0707'
         },
         polygon: {
           nb_sides: 5

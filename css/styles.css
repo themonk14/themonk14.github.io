@@ -56,6 +56,7 @@ body {
 #particles-js canvas
 {
     display: block;
+    vertical-align: bottom;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -7504,8 +7505,8 @@ textarea.form-control-lg {
 
 .text-center-mod {
   text-align: center !important;
-  position:absolute
-  vertical-align: auto;
+  position: absolute;
+  vertical-align: middle;
   padding-top: 390px;
 }
 
@@ -11158,10 +11159,10 @@ body {
 }
 
 .masthead {
-  position: absolute;
+  position: relative;
   width: auto;
   height: auto;
-  min-height: 20rem;
+  min-height: 35rem;
   padding: 15rem 0;
   padding-bottom: 10%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%),url("../assets/img/bg-masthead.jpg");
@@ -11218,7 +11219,7 @@ body {
 }
 
 .about-section-inc-height {
-  height: 1750px;
+  height: 1700px;
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0.9, 0, 1) 75%, rgba(0, 0, 0, 1) 100%);
 }
@@ -11237,10 +11238,11 @@ body {
 }
 
 .projects-section-mod {
-  padding-top: 9%;
+  padding-top: 2%;
 }
 
 .projects-section-mod {
+  padding-top: 2%;
   padding-bottom: 10%;
   background-blend-mode: overlay ;
 }
