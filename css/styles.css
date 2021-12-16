@@ -9518,7 +9518,7 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: rgb(255, 253, 253);
+  background-color: rgb(255, 255, 255);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -9601,7 +9601,6 @@ body {
 }
 
 .masthead {
-  position: relative;
   width: auto;
   height: auto;
   min-height: 35rem;
@@ -9612,7 +9611,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  position: absolute;
+  position: relative;
   z-index: -10;
   top: 0;
   left: 0
