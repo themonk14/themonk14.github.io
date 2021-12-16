@@ -56,8 +56,8 @@ body {
 
 #particles-js canvas
 {
-    display: block;
-    vertical-align: bottom;
+    display: flex;
+    vertical-align: center;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -70,7 +70,7 @@ body {
     width: auto;
     height: auto;
     position: relative;
-    z-index: -10;
+    z-index: -4;
     top: 0;
     left: 0
 }
@@ -206,8 +206,7 @@ mark, .mark {
 
 sub,
 sup {
-  position: relative;
-  font-size: 0.75em;
+  e: 0.75em;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -7509,7 +7508,13 @@ textarea.form-control-lg {
   text-align: center !important;
   position: absolute;
   vertical-align: middle;
-  padding-top: 390px;
+  padding-top: 45vh;
+}
+
+@media (max-width: 1080px) {
+  .text-center-mod{
+    padding-top: 15px;
+  }
 }
 
 .text-decoration-none {
@@ -11083,7 +11088,7 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(255, 253, 253);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -11118,7 +11123,7 @@ body {
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
   }
   #mainNav .nav-link {
     transition: none;
@@ -11132,7 +11137,7 @@ body {
     color: #fff;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #000;
@@ -11143,13 +11148,13 @@ body {
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #020303;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #000000;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #db2929;
+    color: #030000;
     outline: none;
     border-bottom: 0.25rem solid #64a19d;
   }
@@ -11177,9 +11182,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  width: auto;
-  height: auto;
-  position: relative;
+  position: absolute;
   z-index: -10;
   top: 0;
   left: 0
@@ -11193,6 +11196,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
+  white-space: nowrap;
 }
 .masthead h2, .masthead .h2 {
   max-width: 20rem;
