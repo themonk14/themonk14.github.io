@@ -35,7 +35,14 @@
   </head>
 
   <body>
-    <div class="sidebar">
+    <button class="mobile-menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="mobile-menu-bar" aria-hidden="true"></span>
+      <span class="mobile-menu-bar" aria-hidden="true"></span>
+      <span class="mobile-menu-bar" aria-hidden="true"></span>
+    </button>
+    <div class="mobile-menu-overlay" aria-hidden="true"></div>
+    <div class="sidebar" id="site-sidebar">
   <!-- Photo removed as requested -->
       <div class="sidebar-panel">
         <div class="container sidebar-sticky">
@@ -44,10 +51,7 @@
             <p class="lead">{{ site.description }}</p>
           </div>
 
-          <input type="checkbox" id="nav-toggle" class="nav-toggle">
-          <label for="nav-toggle" class="menu-toggle">Menu</label>
-
-          <nav id="site-nav" class="sidebar-nav">
+          <nav class="sidebar-nav">
             <a class="sidebar-nav-item" href="{{ '/' | relative_url }}">Home</a>
             <a class="sidebar-nav-item" href="{{ '/about/' | relative_url }}">About</a>
             <a class="sidebar-nav-item" href="{{ '/projects/' | relative_url }}">Projects</a>
@@ -132,26 +136,85 @@
       // Auto-expand Notes tree to match the current location
       document.addEventListener('DOMContentLoaded', function() {
         const notesSection = document.querySelector('.notes-section');
-        if (!notesSection) return;
-
-        const currentPath = window.location.pathname.replace(/\/$/, '');
-        if (currentPath.includes('/notes/')) {
-          notesSection.classList.add('active');
-        }
-
-        const noteLinks = notesSection.querySelectorAll('.notes-tree a.note-item');
-        noteLinks.forEach(function(link) {
-          const linkPath = (link.getAttribute('href') || '').replace(/\/$/, '');
-          if (linkPath === currentPath) {
-            link.classList.add('active');
-            let category = link.closest('.note-category');
-            while (category) {
-              category.classList.add('active');
-              category = category.parentElement.closest('.note-category');
-            }
+        if (notesSection) {
+          const currentPath = window.location.pathname.replace(/\/$/, '');
+          if (currentPath.includes('/notes/')) {
             notesSection.classList.add('active');
           }
-        });
+
+          const noteLinks = notesSection.querySelectorAll('.notes-tree a.note-item');
+          noteLinks.forEach(function(link) {
+            const linkPath = (link.getAttribute('href') || '').replace(/\/$/, '');
+            if (linkPath === currentPath) {
+              link.classList.add('active');
+              let category = link.closest('.note-category');
+              while (category) {
+                category.classList.add('active');
+                category = category.parentElement.closest('.note-category');
+              }
+              notesSection.classList.add('active');
+            }
+          });
+        }
+
+        const body = document.body;
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+        const sidebar = document.getElementById('site-sidebar');
+        const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+
+        if (mobileToggle && sidebar) {
+          const closeMenu = function(skipFocus) {
+            if (!body.classList.contains('sidebar-open')) return;
+            body.classList.remove('sidebar-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            if (!skipFocus) {
+              mobileToggle.focus();
+            }
+          };
+
+          mobileToggle.addEventListener('click', function() {
+            const isOpen = body.classList.toggle('sidebar-open');
+            mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (!isOpen) {
+              mobileToggle.focus();
+            }
+          });
+
+          if (mobileOverlay) {
+            mobileOverlay.addEventListener('click', function() {
+              closeMenu(true);
+            });
+          }
+
+          document.addEventListener('keyup', function(event) {
+            if (event.key === 'Escape') {
+              closeMenu(false);
+            }
+          });
+
+          if (window.matchMedia) {
+            const mq = window.matchMedia('(min-width: 48em)');
+            const handleChange = function(e) {
+              if (e.matches) {
+                closeMenu(true);
+              }
+            };
+            if (typeof mq.addEventListener === 'function') {
+              mq.addEventListener('change', handleChange);
+            } else if (typeof mq.addListener === 'function') {
+              mq.addListener(handleChange);
+            }
+          }
+
+          sidebarLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+              if (window.matchMedia && window.matchMedia('(max-width: 48em)').matches) {
+                closeMenu(true);
+              }
+            });
+          });
+        }
       });
     </script>
   </body>
