@@ -19,9 +19,6 @@ Currently diving deep into:
 - Automated incident response workflows
 - DevSecOps methodology and implementation
 
-## Connect
-
-Feel free to explore my work or reach out through my social links for collaboration opportunities!ermalink: /
 ---
 
 **North Star:** Defensible, measurable cybersecurity outcomes built through reproducible research and automation.
