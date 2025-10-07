@@ -1,0 +1,64 @@
+/* Mobile-first sidebar layout */
+.sidebar {
+    text-align: center;
+    padding: 0;
+}
+
+.sidebar-hero {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0;
+}
+
+.sidebar-panel {
+    padding: 2rem 1rem;
+    margin: 0;
+}
+
+.sidebar-about h1 {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin: 0 0 0.5rem 0;
+}
+
+.sidebar-about .lead {
+    font-size: 1.1rem;
+    margin: 0.5rem 0 1rem;
+}
+
+/* Tablet and smaller */
+@media (max-width: 800px) {
+    .sidebar-hero {
+        height: 240px;
+    }
+    .sidebar-about h1 {
+        font-size: 2rem;
+    }
+    .sidebar-about .lead {
+        font-size: 1rem;
+    }
+}
+
+/* Phone-sized screens */
+@media (max-width: 480px) {
+    .sidebar-hero {
+        height: 200px;
+    }
+    .sidebar-about h1 {
+        font-size: 1.8rem;
+    }
+    .sidebar-panel {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Ensure text is readable */
+.sidebar-panel,
+.sidebar-about h1,
+.sidebar-about .lead,
+.sidebar-nav a {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}

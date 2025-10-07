@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices--> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>{{ page.title | default: site.title }}</title>
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+
+  <!-- Custom overrides (includes sidebar-hero background) -->
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  
+  <!-- Mobile-first responsive overrides -->
+  <link rel="stylesheet" href="/assets/css/mobile.css">
+
+  <!-- Fonts & icons -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+  <!-- Font Awesome for tree icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+
+  <body>
+    <div class="sidebar">
+  <!-- Photo removed as requested -->
+      <div class="sidebar-panel">
+        <div class="container sidebar-sticky">
+          <div class="sidebar-about">
+           <h1>{{ site.title }}</h1>
+            <p class="lead">{{ site.description }}</p>
+          </div>
+
+          <nav class="sidebar-nav">
+            <a class="sidebar-nav-item" href="{{ '/' | relative_url }}">Home</a>
+            <a class="sidebar-nav-item" href="{{ '/about/' | relative_url }}">About</a>
+            <a class="sidebar-nav-item" href="{{ '/projects/' | relative_url }}">Projects</a>
+            <a class="sidebar-nav-item" href="{{ '/badges/' | relative_url }}">Badges</a>
+            <a class="sidebar-nav-item" href="{{ '/blog/' | relative_url }}">Blog</a>
+            
+            <div class="sidebar-nav-item notes-section">
+              <div class="notes-header" onclick="toggleNotes(this)">
+                <i class="fas fa-chevron-right"></i>
+                <span>Notes</span>
+              </div>
+              <div class="notes-tree">
+                {% assign note_pages = site.pages | where_exp: 'page', 'page.notes_section' %}
+                {% if note_pages.size > 0 %}
+                  {% assign note_sections = note_pages | group_by: 'notes_section' | sort: 'name' %}
+                  {% for section in note_sections %}
+                    <div class="note-category">
+                      <div class="category-header" onclick="toggleCategory(this)">
+                        <i class="fas fa-chevron-right"></i>
+                        <span>{{ section.name }}</span>
+                      </div>
+                      <div class="category-items">
+                        {% assign section_categories = section.items | group_by: 'notes_category' | sort: 'name' %}
+                        {% for category in section_categories %}
+                          <div class="note-category">
+                            <div class="category-header" onclick="toggleCategory(this)">
+                              <i class="fas fa-chevron-right"></i>
+                              <span>{{ category.name | default: 'General' }}</span>
+                            </div>
+                            <div class="category-items">
+                              {% assign sorted_pages = category.items | sort: 'notes_order' %}
+                              {% for note in sorted_pages %}
+                                <a href="{{ note.url | relative_url }}" class="note-item">
+                                  {{ note.notes_label | default: note.title | default: note.name | split: '.' | first }}
+                                </a>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                {% else %}
+                  <p class="note-empty">No notes yet.</p>
+                {% endif %}
+              </div>
+            </div>
+          </nav>
+
+          <div class="social-links">
+            <a href="https://github.com/themonk14" target="_blank" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/prudhvi-reddy-koduru/" target="_blank" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content container">
+      <div class="page">
+        {% if page.url == "/about/" %}
+          {{ content | remove_first: '<h1 class="page-title">About</h1>' }}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </div>
+    </div>
+    <script>
+      function toggleNotes(element) {
+        const notesSection = element.closest('.notes-section');
+        notesSection.classList.toggle('active');
+      }
+
+      function toggleCategory(element) {
+        const category = element.closest('.note-category');
+        category.classList.toggle('active');
+      }
+
+      // Auto-expand Notes tree to match the current location
+      document.addEventListener('DOMContentLoaded', function() {
+        const notesSection = document.querySelector('.notes-section');
+        if (!notesSection) return;
+
+        const currentPath = window.location.pathname.replace(/\/$/, '');
+        if (currentPath.includes('/notes/')) {
+          notesSection.classList.add('active');
+        }
+
+        const noteLinks = notesSection.querySelectorAll('.notes-tree a.note-item');
+        noteLinks.forEach(function(link) {
+          const linkPath = (link.getAttribute('href') || '').replace(/\/$/, '');
+          if (linkPath === currentPath) {
+            link.classList.add('active');
+            let category = link.closest('.note-category');
+            while (category) {
+              category.classList.add('active');
+              category = category.parentElement.closest('.note-category');
+            }
+            notesSection.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
