@@ -43,7 +43,6 @@
     </button>
     <div class="mobile-menu-overlay" aria-hidden="true"></div>
     <div class="sidebar" id="site-sidebar">
-  <!-- Photo removed as requested -->
       <div class="sidebar-panel">
         <div class="container sidebar-sticky">
           <div class="sidebar-about">
@@ -115,11 +114,14 @@
 
     <div class="content container">
       <div class="page">
-        {% if page.url == "/about/" %}
-          {{ content | remove_first: '<h1 class="page-title">About</h1>' }}
-        {% else %}
-          {{ content }}
+        {% assign filtered_content = content %}
+        {% if page.title %}
+          {% assign auto_title = '<h1 class="page-title">' | append: page.title | append: '</h1>' %}
+          {% assign auto_title_with_newline = auto_title | append: "\n" %}
+          {% assign filtered_content = filtered_content | replace_first: auto_title_with_newline, '' %}
+          {% assign filtered_content = filtered_content | replace_first: auto_title, '' %}
         {% endif %}
+        {{ filtered_content }}
       </div>
     </div>
     <script>

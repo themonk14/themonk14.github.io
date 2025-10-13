@@ -1,6 +1,8 @@
 ---
 layout: page
 permalink: /
+title: Knowledge Base
+hide_auto_title: true
 ---
 
 ## Knowledge Base
@@ -24,4 +26,3 @@ Currently diving deep into:
 **North Star:** Defensible, measurable cybersecurity outcomes built through reproducible research and automation.
 
 → [About Me](/about/) | [Projects](/projects/) | [Digital Badges](/badges/)
-
