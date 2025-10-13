@@ -11,7 +11,7 @@ notes_order: 3
 ## Follow these steps:
 
 1. **Fuzzing**
-	Write a python program to test and crash the application. Then note down the application's threshold.		```
+	Write a python program to test and crash the application. Then note down the application's threshold.
 	```
 	import socket
 	import sys
