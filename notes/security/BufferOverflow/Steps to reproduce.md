@@ -8,6 +8,8 @@ notes_label: Steps to Reproduce
 notes_order: 2
 ---
 
+## Overview
+
 1. Crash the application
 2. Find EIP location
 3. Confirm EIP location
@@ -34,6 +36,7 @@ print s.recv(100)
 
 s.close()
 ```
+
 
 1. Crash the application by sending large number of random characters
 2. Use pattern_create.rb -l <no. at which the application crashed>

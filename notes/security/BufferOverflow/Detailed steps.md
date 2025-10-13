@@ -8,6 +8,8 @@ notes_label: Detailed Steps
 notes_order: 3
 ---
 
+## Follow these steps:
+
 1. **Fuzzing**
 	Write a python program to test and crash the application. Then note down the application's threshold.		```
 	```
@@ -81,10 +83,10 @@ notes_order: 3
 8. Identify the bad characters of the application by sending some bad characters via the buffer using python
 9. Generate a shellcode using msfvenom, while generating, remove the badchars from the shellcode using -b flag. Mention the bad chars in between the apostrophe's. 
 10. Identify the jmpesp's memory address. Note down the memory address. Now write the memory address in little endian.
-11. For example, if jmpesp's memory is 311712F3, write it as 
-		\xf3\x12\x17\x31
+11. For example, if jmpesp's memory is `311712F3`, write it as 
+		`\xf3\x12\x17\x31`
 12. Little endian is used because x86 architecture understands little endian. send this along with the buffer to the target i.e.,
-		"A"*524 +\xf3\x12\x17\x31 + "c" 8 600
+		`"A"*524 +\xf3\x12\x17\x31 + "c" 8 600`
 13.  Add few NOPs, note down the shell code size, subtract the no.of NOPs added and the size of shellcode from the no.of c's
 14. Final payload format should be something like,
-		payload= "A"*exact offset + <jmpesp value written in little endian> + "\x90"* 4/8/12/16 + <shellcode> + "c" * 100/200/300/400
+		`payload= "A"*exact offset + <jmpesp value written in little endian> + "\x90"* 4/8/12/16 + <shellcode> + "c" * 100/200/300/400`
