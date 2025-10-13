@@ -8,7 +8,7 @@ notes_label: Steps to Reproduce
 notes_order: 2
 ---
 
-## Overview
+## Steps to reproduce
 
 1. Crash the application
 2. Find EIP location
