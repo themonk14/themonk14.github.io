@@ -8,6 +8,7 @@ notes_label: Kubernetes
 notes_order: 1
 ---
 
+# Kubernetes Overview
 
 A Kubernetes setup is made up of multiple layers, from the overall cluster down to the containers actually running your application. This diagram shows the relationships between **clusters**, **namespaces**, **deployments**, **services**, **pods**, and **containers**, and explains how manifest files (`deployment.yaml` and `service.yaml`) control what’s deployed.
 
