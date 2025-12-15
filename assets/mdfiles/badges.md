@@ -153,7 +153,7 @@ A selection of verified credentials.
       </div>
       <div>
         <h3 class="badge-title">Google Cybersecurity</h3>
-        <p class="badge-issuer">Issuer: Google</p>
+        <p class="badge-issuer">Issuer: Google & Coursera</p>
       </div>
     </div>
     <div class="badge-body">
