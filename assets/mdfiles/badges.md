@@ -148,7 +148,7 @@ A selection of verified credentials.
   <article class="badge-card">
     <div class="badge-header">
       <div class="badge-media">
-        <img src="https://d3njjcbhboj96f.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-certificate-images.s3.amazonaws.com/DiKM3JFMSzSijNyRTFs0bA" width="64" height="64"
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-badge-assets.s3.amazonaws.com/preview/9d58fc779d2b4363a8050e31acad26d3.png?auto=format%2Ccompress&dpr=2" width="64" height="64"
              alt="Google Cybersecurity badge" loading="lazy">
       </div>
       <div>
