@@ -144,6 +144,26 @@ A selection of verified credentials.
     </div>
   </article>
 
+  <!-- Google Cybersecurity Badge -->
+  <article class="badge-card">
+    <div class="badge-header">
+      <div class="badge-media">
+        <img src="https://d3njjcbhboj96f.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-certificate-images.s3.amazonaws.com/DiKM3JFMSzSijNyRTFs0bA" width="64" height="64"
+             alt="Google Cybersecurity badge" loading="lazy">
+      </div>
+      <div>
+        <h3 class="badge-title">Google Cybersecurity</h3>
+        <p class="badge-issuer">Issuer: Google</p>
+      </div>
+    </div>
+    <div class="badge-body">
+      The Google Cybersecurity Certificate equips learners with the skills to identify cybersecurity threats, assess risks, and protect systems from attacks.
+    </div>
+    <div class="badge-actions">
+      <a href="https://www.coursera.org/account/accomplishments/badge/DiKM3JFMSzSijNyRTFs0bA" target="_blank" rel="noopener">View credential</a>
+    </div>
+  </article>
+
 </div>
 
 <br>
