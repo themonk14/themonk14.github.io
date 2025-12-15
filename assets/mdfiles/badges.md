@@ -43,7 +43,25 @@ A selection of verified credentials.
       <a href="https://certified.training.wiz.io/130258f9-bd9a-4a15-9f85-6d37af966eaf" target="_blank" rel="noopener">View credential</a>
     </div>
   </article>
-
+  <!-- Google Cybersecurity Badge -->
+  <article class="badge-card">
+    <div class="badge-header">
+      <div class="badge-media">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-badge-assets.s3.amazonaws.com/preview/9d58fc779d2b4363a8050e31acad26d3.png?auto=format%2Ccompress&dpr=2" width="64" height="64"
+             alt="Google Cybersecurity badge" loading="lazy">
+      </div>
+      <div>
+        <h3 class="badge-title">Google Cybersecurity</h3>
+        <p class="badge-issuer">Issuer: Google & Coursera</p>
+      </div>
+    </div>
+    <div class="badge-body">
+      The Google Cybersecurity Certificate equips learners with the skills to identify cybersecurity threats, assess risks, and protect systems from attacks.
+    </div>
+    <div class="badge-actions">
+      <a href="https://www.coursera.org/account/accomplishments/badge/DiKM3JFMSzSijNyRTFs0bA" target="_blank" rel="noopener">View credential</a>
+    </div>
+  </article>
   <!-- Postman API Student Expert -->
   <article class="badge-card">
     <div class="badge-header">
@@ -144,25 +162,7 @@ A selection of verified credentials.
     </div>
   </article>
 
-  <!-- Google Cybersecurity Badge -->
-  <article class="badge-card">
-    <div class="badge-header">
-      <div class="badge-media">
-        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-badge-assets.s3.amazonaws.com/preview/9d58fc779d2b4363a8050e31acad26d3.png?auto=format%2Ccompress&dpr=2" width="64" height="64"
-             alt="Google Cybersecurity badge" loading="lazy">
-      </div>
-      <div>
-        <h3 class="badge-title">Google Cybersecurity</h3>
-        <p class="badge-issuer">Issuer: Google & Coursera</p>
-      </div>
-    </div>
-    <div class="badge-body">
-      The Google Cybersecurity Certificate equips learners with the skills to identify cybersecurity threats, assess risks, and protect systems from attacks.
-    </div>
-    <div class="badge-actions">
-      <a href="https://www.coursera.org/account/accomplishments/badge/DiKM3JFMSzSijNyRTFs0bA" target="_blank" rel="noopener">View credential</a>
-    </div>
-  </article>
+
 
 </div>
 
