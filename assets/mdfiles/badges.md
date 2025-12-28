@@ -32,7 +32,7 @@ A selection of verified credentials.
              alt="Wiz Security Fundamentals badge" loading="lazy">
       </div>
       <div>
-        <h3 class="badge-title">Wiz Security Fundamentals</h3>
+        <h3 class="badge-title">Wiz Certified Cloud Fundamentals</h3>
         <p class="badge-issuer">Issuer: Wiz Academy</p>
       </div>
     </div>

@@ -219,5 +219,39 @@
         }
       });
     </script>
+    <!-- Three.js (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <!-- Canvas Container for Background -->
+    <div id="canvas-container"></div>
+
+    <!-- UI Controls for Particles -->
+    <div id="particle-ui-controls">
+        <label>Theme:</label>
+        <div class="theme-selector">
+            <button class="theme-btn active" data-theme="bw" onclick="setParticleTheme('bw', this)">Dark</button>
+            <button class="theme-btn" data-theme="gold" onclick="setParticleTheme('gold', this)">Gold</button>
+        </div>
+    </div>
+
+    <!-- Particle Logic -->
+    <script src="/assets/js/particles.js"></script>
+    <script>
+        function setParticleTheme(theme, btn) {
+            // Update active state
+            document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Dispatch event for particles.js
+            window.dispatchEvent(new CustomEvent('particle-theme-change', { detail: { theme: theme } }));
+
+            // Optional: Toggle body class for CSS global changes (e.g. background color)
+            if (theme === 'gold') {
+                document.body.classList.add('theme-gold');
+            } else {
+                document.body.classList.remove('theme-gold');
+            }
+        }
+    </script>
   </body>
 </html>
